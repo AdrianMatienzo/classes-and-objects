@@ -14,4 +14,25 @@ public class Library {
         System.out.println("Book added: \"" + title + "\"");
     }
 
+    public void displayAllBooks(){
+        System.out.println("==========================================================================================================");
+        System.out.println("                                                 BOOK LIST                                                ");
+        System.out.println("==========================================================================================================");
+        System.out.println("----------------------------------------------------------------------------------------------------------");
+        System.out.printf("%-45s %-39s %s\n", "Title", "Author", "Publication Year");
+        System.out.println("----------------------------------------------------------------------------------------------------------");
+        for (Book book : books) {
+            System.out.printf("%-45s %-39s %d\n", book.getTitle(), book.getAuthor(), book.getYear());
+            }
+        System.out.println("----------------------------------------------------------------------------------------------------------");
+    }
+
+    public boolean findBook(String searchTitle, Book book){
+            if (book.getTitle().equalsIgnoreCase(searchTitle)) {
+                    System.out.println("Book found:");
+                    book.bookInfo();
+                    return true;
+            }
+            return false;
+    }
 }
