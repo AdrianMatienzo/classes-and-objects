@@ -29,7 +29,7 @@ public class Library {
 
     public boolean findBook(String searchTitle, Book book){
             if (book.getTitle().equalsIgnoreCase(searchTitle)) {
-                    System.out.println("Book found:");
+                    System.out.println("Book found!");
                     book.bookInfo();
                     return true;
             }
