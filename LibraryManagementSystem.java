@@ -72,7 +72,7 @@ public class LibraryManagementSystem{
             switch (choice){
                 case 1:
                     String title = inputValidation("Enter book Title: ", "Invalid. Please enter a valid title (letters, numbers, spaces, and basic punctuation only).", "^[a-zA-Z0-9.,'\"!?-][a-zA-Z0-9\\s.,'\"!?-]*$").trim();
-                    String author = inputValidation("Enter book Author: ", "Invalid. Please enter a valid author name.", "^[a-zA-Z.-][a-zA-Z\\s.-]*$").trim();
+                    String author = inputValidation("Enter book Author: ", "Invalid. Please enter a valid author name.", "^[a-zA-Z.,-][a-zA-Z\\s.,-]*$").trim();
                     int year = yearValidation("Enter Publication Year (4 digits only): ", "^[0-9]+$");
                     library.addBook(title, author, year);
                     break;
